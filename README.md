@@ -5,7 +5,7 @@ images spanning 11 age categories. Achieved 57% accuracy on 5-class grouping and
 demonstrated that task framing significantly impacts model performance.
 
 ![Sample Age Group Predictions](images/sample_predictions.png)
-*Sample predictions from the fine-tuned VGG16 model — performs strongest on 21-30 
+*Sample predictions from the fine-tuned VGG16 model performs strongest on 21-30 
 (most represented class) and shows adjacent-class confusion on harder age groups*
 
 ---
