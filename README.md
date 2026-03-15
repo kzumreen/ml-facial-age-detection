@@ -4,7 +4,7 @@ custom CNN, and VGG16 transfer learning for facial age estimation across 20,000+
 images spanning 11 age categories. Achieved 57% accuracy on 5-class grouping and 
 demonstrated that task framing significantly impacts model performance.
 
-![Sample Age Group Predictions](images/sample_predictions.png)
+![Sample Age Group Predictions](visuals/sample_predictions.png)
 *Sample predictions from the fine-tuned VGG16 model performs strongest on 21-30 
 (most represented class) and shows adjacent-class confusion on harder age groups*
 
@@ -31,7 +31,7 @@ inter-class similarity in facial aging.
 - **Demographics:** Diverse ethnic backgrounds including White, Black, Asian, and Indian
 - **Preprocessing:** Resized to 128×128, normalized. Precise ages extracted from filenames for granular analysis
 
-![Age Group Distribution](images/age_distribution.png)
+![Age Group Distribution](visuals/age_distribution.png)
 *Significant class imbalance — 21-30 group contains ~1,150 images vs fewer than 
 50 for ages 1-10 and 101+, directly affecting model bias toward majority classes*
 
@@ -45,7 +45,7 @@ inter-class similarity in facial aging.
 - Tested k=2 through k=15 using silhouette scores — k=2 achieved highest 
   cohesion (0.20) but k=10 chosen for age-relevant granularity (score: 0.0858)
 
-![K-Means PCA Projection](images/kmeans_pca.png)
+![K-Means PCA Projection](visuals/kmeans_pca.png)
 *2D PCA projection of 10 K-Means clusters — well-separated spatially but 
 clusters capture visual similarity patterns rather than chronological age*
 
@@ -64,11 +64,11 @@ age-related features — motivating the move to supervised methods.
 - Training accuracy reached ~91% while validation plateaued at ~40%, confirming 
   overfitting — addressed via dropout and learning rate scheduling
 
-![CNN Training Curves](images/training_curves.png)
+![CNN Training Curves](visuals/training_curves.png)
 *Training vs validation accuracy and loss over epochs — visible overfitting gap 
 motivates architectural improvements and broader age grouping*
 
-![CNN Confusion Matrix](images/cnn_confusion_matrix.png)
+![CNN Confusion Matrix](visuals/cnn_confusion_matrix.png)
 *Confusion matrix showing strong bias toward 21-30 class — directly reflects 
 class imbalance in training data*
 
@@ -80,7 +80,7 @@ class imbalance in training data*
 - Tested with both 11 granular and 5 broad age categories
 - Class weighting applied to address imbalance
 
-![SVM Confusion Matrix](images/svm_confusion_matrix.png)
+![SVM Confusion Matrix](visuals/svm_confusion_matrix.png)
 *SVM with 5 broad age groups — improvement over 11-class version, but still 
 biased toward the 20-39 majority class*
 
