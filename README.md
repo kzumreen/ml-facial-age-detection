@@ -1,6 +1,6 @@
 # Age Detection from Facial Images
-Implemented and compared three machine learning approaches — K-Means clustering, 
-custom CNN, and VGG16 transfer learning — for facial age estimation across 20,000+ 
+Implemented and compared three machine learning approaches K-Means clustering, 
+custom CNN, and VGG16 transfer learning for facial age estimation across 20,000+ 
 images spanning 11 age categories. Achieved 57% accuracy on 5-class grouping and 
 demonstrated that task framing significantly impacts model performance.
 
@@ -14,7 +14,7 @@ demonstrated that task framing significantly impacts model performance.
 
 Age estimation is a complex computer vision task due to significant variation in 
 how aging manifests across individuals. This project implements and compares 
-multiple approaches — from unsupervised clustering to transfer learning — to 
+multiple approaches from unsupervised clustering to transfer learning to 
 understand both the capability and limits of each method on the same dataset.
 
 A key finding emerged through iteration: reframing the problem from 11 granular 
